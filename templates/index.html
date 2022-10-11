@@ -1,0 +1,703 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:300,400,500,700&amp;display=swap"
+        rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/components/datepicker.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/components/timepicker.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/components/bs-select.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/components/bs-switches.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'demos/travel/travel.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'demos/car/css/car-icons/style.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'demos/car/css/fonts.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'one-page/onepage.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/dark.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/font-icons.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'one-page/css/et-line.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'one-page/css/fonts.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/colors147b.css?color=c85e51' %}" type="text/css" />
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body class="stretched side-push-panel">
+    <div class="body-overlay"></div>
+    <div id="wrapper" class="clearfix">
+        <header id="header" class="full-header transparent-header border-full-header dark header-size-custom"
+            data-sticky-shrink="false" data-sticky-class="not-dark" data-sticky-offset="full"
+            data-sticky-offset-negative="100">
+            <div id="header-wrap">
+                <div class="container">
+                    <div class="header-row">
+                        <div id="logo">
+                            <a href="{% url 'pages:home' %}" class="standard-logo"
+                                data-dark-logo="{% static 'images/logo.png' %}">
+                                <img style="height:30px;" src="{% static 'images/logo.png' %}" alt="Iqbal Logo" />
+                            </a>
+                            <a href="{% url 'pages:home' %}" class="retina-logo"
+                                data-dark-logo="{% static 'images/logo.png' %}">
+                                <img style="height:30px;" src="{% static 'images/logo.png' %}" alt="Iqbal Logo" />
+                            </a>
+                        </div>
+                        <div id="primary-menu-trigger">
+                            <svg class="svg-trigger" viewBox="0 0 100 100">
+                                <path
+                                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+                                </path>
+                                <path d="m 30,50 h 40"></path>
+                                <path
+                                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+                                </path>
+                            </svg>
+                        </div>
+
+                        <nav class="primary-menu">
+                            <ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250"
+                                data-offset="65">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link" data-href="#wrapper">
+                                        <div>Home</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link" data-href="#section-about">
+                                        <div>About</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link" data-href="#section-works" id="test">
+                                        <div>Works</div>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="{% url 'pages:contact' %}" class="menu-link">
+                                        <div>Contact</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="header-wrap-clone"></div>
+        </header>
+
+        <section id="slider" class="slider-element slider-parallax dark min-vh-60 min-vh-md-100 include-header">
+            <div class="slider-inner" style="
+            background-image: url('staticfiles/one-page/images/page/main2.png');
+            background-size: cover;
+            background-position: center center;
+          ">
+                <div class="vertical-middle slider-element-fade">
+                    <div class="container text-center py-5">
+                        <div class="emphasis-title">
+                            <h1>
+                                <span class="text-rotater nocolor" data-separator="|" data-rotate="fadeIn"
+                                    data-speed="1000">
+                                    <span class="t-rotate fw-bold font-body opm-large-word">
+                                        Iqbal rental.|Car
+                                        services.|Provide.|Affordable.|Comfortable.
+                                    </span>
+                                </span>
+                            </h1>
+                        </div>
+                        <a href="#" class="button button-border button-light button-circle"
+                            data-scrollto="#section-works" data-easing="easeInOutExpo" data-speed="1250"
+                            data-offset="70">
+                            Filter by City
+                        </a>
+                    </div>
+                </div>
+                <div class="video-wrap">
+                    <div class="video-overlay" style="background-color: rgba(0, 0, 0, 0.55)"></div>
+                </div>
+                <a href="#" data-scrollto="#section-about" data-easing="easeInOutExpo" data-speed="1250"
+                    data-offset="65" class="one-page-arrow dark">
+                    <i class="icon-angle-down infinite animated fadeInDown"></i>
+                </a>
+            </div>
+        </section>
+
+        <div id="section-about" class="section mt-0 ps-0 clearfix">
+            <div class="container p-0">
+                <div class="row d-flex align-items-center">
+                    <div class="col-12 col-lg-2 ps-0">
+                        <div class="running-car mt-6">
+                            <img class="car" src="{% static 'demos/car/images/moving-car/car.jpg' %}" alt="Image" />
+                            <img class="wheel" src="{% static 'demos/car/images/moving-car/car-tier.png' %}"
+                                alt="Image" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-10">
+                        <div class="container clearfix">
+                            <div class="row clearfix" style="position: relative">
+                                <div class="col-lg-6 offset-lg-6">
+                                    <div>
+                                        <h1 class="r-hlarge">
+                                            Our Fleet
+                                            <br />
+                                            Your Fleet
+                                        </h1>
+                                    </div>
+                                    <p>
+                                        Whatever your transportation needs may be, we can provide the perfect
+                                        mode of transportation in the Pk at a price that can't be beat. We take pride in
+                                        guaranteeing the lowest rates for your transportation needs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="section-works" class="raees" style="top: -60px">
+            <div class="content-wrap bg-white pt-0" style="overflow: visible">
+                <div class="container">
+                    <div class="card p-4 shadow">
+                        <form action="{% url 'pages:search' %}" method="post" class="mb-0">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-2 col-sm-12">
+                                    <label class="mb-3">Intercity Ride</label><br>
+                                    <div class="btn-group">
+                                        <input type="radio" class="btn-check yes" name="type"
+                                            id="website-cost-google-analytics-yes" checked="" autocomplete="off"
+                                            value="Yes">
+                                        <label for="website-cost-google-analytics-yes"
+                                            class="btn btn-outline-secondary px-3 fw-semibold ls0 nott yes">Yes</label>
+
+                                        <input type="radio" class="btn-check no" name="type"
+                                            id="website-cost-google-analytics-no" autocomplete="off" value="No">
+                                        <label for="website-cost-google-analytics-no"
+                                            class="btn btn-outline-secondary px-3 fw-semibold ls0 nott no">No</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-6 col-12 mt-4 mt-md-0" id="from">
+                                    <label>From City:</label>
+                                    <select name="from" class="form-select">
+                                        <option value="Lahore">Lahore</option>
+                                        <option value="Islamabad">Islamabad</option>
+                                        <option value="Faisalabad">Faisalabad</option>
+                                        <option value="Gujranwala">Gujranwala</option>
+                                        <option value="Karachi">Karachi</option>
+                                        <option value="Multan">Multan</option>
+                                        <option value="Rawalpindi">Rawalpindi</option>
+                                        <option value="Peshawar">Peshawar</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4 col-sm-6 col-12 mt-4 mt-md-0" id="to">
+                                    <label>To City:</label>
+                                    <select id="rayan" name="to" class="form-select">
+                                        <option value="Islamabad">Islamabad</option>
+                                        <option value="Lahore">Lahore</option>
+                                        <option value="Faisalabad">Faisalabad</option>
+                                        <option value="Gujranwala">Gujranwala</option>
+                                        <option value="Karachi">Karachi</option>
+                                        <option value="Multan">Multan</option>
+                                        <option value="Rawalpindi">Rawalpindi</option>
+                                        <option value="Peshawar">Peshawar</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6 col-12 mt-4 mt-md-0" id="city" style="display: none;">
+                                    <label>Select City:</label>
+                                    <select name="city" class="form-select" required>
+                                        <option value="Lahore">Lahore</option>
+                                        <option value="Islamabad">Islamabad</option>
+                                        <option value="Faisalabad">Faisalabad</option>
+                                        <option value="Gujranwala">Gujranwala</option>
+                                        <option value="Karachi">Karachi</option>
+                                        <option value="Multan">Multan</option>
+                                        <option value="Rawalpindi">Rawalpindi</option>
+                                        <option value="Peshawar">Peshawar</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 col-sm-6 col-6">
+                                    <button type="submit" class="button button-3d button-rounded w-100 ms-0"
+                                        style="margin-top: 29px">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="section m-0 pt-0 bg-transparent">
+                    <div class="container">
+                        <ul class="grid-filter style-2 w-100" data-container="#portfolio">
+
+                            {% if 'suv' in li_list %}
+                            <li>
+                                <a href="#" data-filter=".cf-cuv">
+                                    <i class="icon-car-cuv"></i>
+                                    <span>Suv</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if 'sedan' in li_list %}
+                            <li>
+                                <a href="#" data-filter=".cf-sedan">
+                                    <i class="icon-car-sedan"></i>
+                                    <span>Sedan</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% if 'hatchback' in li_list %}
+                            <li>
+                                <a href="#" data-filter=".cf-hatchback">
+                                    <i class="icon-car-hatchback"></i>
+                                    <span>Hatchback</span>
+                                </a>
+                            </li>
+                            {% endif %}
+                            <li class="activeFilter ms-auto">
+                                <a class="button button-small button-rounded button-reset" href="#" data-filter="*">
+                                    Show All
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div id="portfolio" class="portfolio row gutter-30 grid-container " data-layout="fitRows">
+
+                            {% if 'sedan' in li_list %}
+                            {% for car in cars %}
+                            {% if car.car.type.name == "sedan" %}
+                            <article class="portfolio-item col-12 col-sm-6 col-md-4 cf-sedan">
+                                <div class="grid-inner">
+                                    <div class="portfolio-image">
+                                        <a href="#">
+                                            <img src="{{car.car.logo.url}}" alt="Open Imagination" />
+                                            <div class="filter-p-pricing">
+                                                <span class="p-price fw-bold ls1">
+                                                    Rs {{car.price}}
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-desc">
+                                        <h3><a href="#">{{car.car.make}} - {{car.car.modal}}</a></h3>
+                                        <span>
+                                            {{car.car.content}}
+                                        </span>
+                                    </div>
+                                    <div class="row g-0 car-p-features font-primary clearfix">
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-door"></i>
+                                            <span>{{car.car.capacity}} Seater</span>
+                                        </div>
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-wheel"></i>
+                                            <span>15 Inch</span>
+                                        </div>
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-care"></i>
+                                            <span>year {{car.car.year}}</span>
+                                        </div>
+                                        <a onclick="bookCar('{{car.id}}');" href="#myModal1" data-lightbox="inline"
+                                            class="button button-desc text-center mt-4">
+                                            <div>Book {{car.car.make}} {{car.car.modal}}</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if 'suv' in li_list %}
+                            {% for car in cars %}
+                            {% if car.car.type.name == "suv" %}
+                            <article class="portfolio-item col-12 col-sm-6 col-md-4 cf-cuv">
+                                <div class="grid-inner">
+                                    <div class="portfolio-image">
+                                        <a href="#">
+                                            <img src="{{car.car.logo.url}}" alt="Open Imagination" />
+                                            <div class="filter-p-pricing">
+                                                <span class="p-price fw-bold ls1">
+                                                    Rs {{car.price}}
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-desc">
+                                        <h3><a href="#">{{car.car.make}} - {{car.car.modal}}</a></h3>
+                                        <span>
+                                            {{car.car.content}}
+                                        </span>
+                                    </div>
+                                    <div class="row g-0 car-p-features font-primary clearfix">
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-door"></i>
+                                            <span>{{car.car.capacity}} Seater</span>
+                                        </div>
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-wheel"></i>
+                                            <span>15 Inch</span>
+                                        </div>
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-care"></i>
+                                            <span>year {{car.car.year}}</span>
+                                        </div>
+                                        <a onclick="bookCar('{{car.id}}');" href="#myModal1" data-lightbox="inline"
+                                            class="button button-desc text-center mt-4">
+                                            <div>Book {{car.car.make}} {{car.car.modal}}</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+
+                            {% if 'hatchback' in li_list %}
+                            {% for car in cars %}
+                            {% if car.car.type.name == "hatchback" %}
+                            <article class="portfolio-item col-12 col-sm-6 col-md-4  cf-hatchback">
+                                <div class="grid-inner">
+                                    <div class="portfolio-image">
+                                        <a href="#">
+                                            <img src="{{car.car.logo.url}}" alt="Open Imagination" />
+                                            <div class="filter-p-pricing">
+                                                <span class="p-price fw-bold ls1">
+                                                    Rs {{car.price}}
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="portfolio-desc">
+                                        <h3><a href="#">{{car.car.make}} - {{car.car.modal}}</a></h3>
+                                        <span>
+                                            {{car.car.content}}
+                                        </span>
+                                    </div>
+                                    <div class="row g-0 car-p-features font-primary clearfix">
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-door"></i>
+                                            <span>{{car.car.capacity}} Seater</span>
+                                        </div>
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-wheel"></i>
+                                            <span>15 Inch</span>
+                                        </div>
+                                        <div class="col-lg-4 col-6 p-0">
+                                            <i class="icon-car-care"></i>
+                                            <span>year {{car.car.year}}</span>
+                                        </div>
+                                        <a onclick="bookCar('{{car.id}}');" href="#myModal1" data-lightbox="inline"
+                                            class="button button-desc text-center mt-4">
+                                            <div>Book {{car.car.make}} {{car.car.modal}}</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="section center nbottomomargin mt-3 footer-stick" style="padding: 80px 0">
+                    <div class="container clearfix">
+                        <h3 class="font-primary">
+                            Special Offers on Villa Long Term Rentals &amp; Lease Agreements
+                        </h3>
+                        <a href="contact.html" class="button button-color button-large button-rounded">
+                            Contact Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="portfolio" class="portfolio row grid-container portfolio-overlay-open g-0">
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-media pf-icons">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="portfolio-single.html">
+                            <img src="{% static 'demos/travel/images/packages/faisal-masjid.jpg' %}"
+                                alt="Faisal Masjid" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Islamabad</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-illustrations">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="portfolio-single.html">
+                            <img src="{% static 'demos/travel/images/packages/minare-pakistan.png' %}"
+                                alt="Minare Pakistan" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Lahore</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-graphics pf-uielements">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="#">
+                            <img src="{% static 'demos/travel/images/packages/clock-tower.png' %}" alt="Clock Tower" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Faisalabad</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-icons pf-illustrations">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="portfolio-single.html">
+                            <img src="{% static 'demos/travel/images/packages/nishani-manzil.png' %}"
+                                alt="Nishani Manzil" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Gujranwala</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-uielements pf-media">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="portfolio-single.html">
+                            <img src="{% static 'demos/travel/images/packages/minare-quaid.jpg' %}"
+                                alt="Minare Quaid" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Karachi</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-graphics pf-illustrations">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="portfolio-single.html">
+                            <img src="{% static 'demos/travel/images/packages/multan.png' %}" alt="Multan" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Multan</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-uielements pf-icons">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="portfolio-single-video.html">
+                            <img src="{% static 'demos/travel/images/packages/peshawar.png' %}" alt="Peshawar" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Peshawar</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="portfolio-item col-12 col-sm-6 col-md-4 col-lg-3 pf-graphics">
+                <div class="grid-inner">
+                    <div class="portfolio-image">
+                        <a href="portfolio-single.html">
+                            <img src="{% static 'demos/travel/images/packages/rawalpindi.png' %}" alt="Ravalpindi" />
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark flex-column">
+                                    <div class="portfolio-desc py-0 text-center">
+                                        <h3>Travel to Rawalpindi</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-overlay-bg dark op-ts op-05" data-hover-animate="op-1"
+                                    data-hover-animate-out="op-05"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <footer id="footer" class="dark border-top-0">
+            <div class="container">
+
+                <div class="footer-widgets-wrap">
+
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-12 col-md-6">
+                            <div class="footer-big-contacts">
+                                <span>Call Us:</span>
+                                03004851598
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="footer-big-contacts">
+                                <span>Email Us:</span>
+                                <a href="mailto:rentacariqbal.com">rentacariqbal.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="copyrights">
+                <div class="container text-center text-uppercase">
+                    Copyrights &copy; 2020 All Rights Reserved by Iqbal Inc.
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div>
+        <div id="floating-icons-768">
+            <div>
+                <a href="https://web.whatsapp.com/send?phone=923014636243&amp;text=Hy Iqbal rental Services i want to book a ride."
+                    class="float" target="_blank">
+                    <i class="text-white fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <div>
+                <a href="tel:+923014636243" title="Call Now" class="dpx-header-callnow float-1">
+                    <i class="text-white fas fa-phone-alt"></i>
+                </a>
+            </div>
+        </div>
+        <div id="footer-icons-767" class="container-fluid bg-white">
+            <div class="row">
+                <div class="col-6 bg-white d-flex justify-content-center">
+                    <a href="https://api.whatsapp.com/send?phone=923014636243&amp;text=Hy Iqbal rental Services i want to book a ride.."
+                        target="_blank">
+                        <button class="whatsapp-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'modals/book.html' %}
+    {% include 'modals/booking-done.html' %}
+    {% include 'modals/contact.html' %}
+    <div id="gotoTop" class="icon-angle-up"></div>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/plugins.min.js' %}"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyAO2BYvn4xyrdisvP8feA4AS_PGZFxJDp4"></script>
+    <script src="{% static 'js/components/moment.js' %}"></script>
+    <script src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/components/bs-select.js' %}"></script>
+    <script src="{% static 'js/components/bs-switches.js' %}"></script>
+    <script src="{% static 'js/components/timepicker.js' %}"></script>
+    <script src="{% static 'js/components/datepicker.js' %}"></script>
+    <script src="{% static 'js/components/daterangepicker.js' %} "></script>
+    <script src="{% static 'custom.js' %} "></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+        data-cf-beacon='{"rayId":"75651a078ca646b5","token":"0627f0b8b73941069bc19139e63db853","version":"2022.8.1","si":100}'
+        crossorigin="anonymous">
+    </script>
+    {% if href %}
+    <script>
+        $(window).on("load", function () {
+            $('html, body').animate({
+                scrollTop: $(".raees").offset().top
+            }, 1000);
+            var from = '{{from}}';
+            var to = '{{to}}';
+            var city = '{{city}}';
+            var intercity = '{{intercity}}';
+            $(`[name=from]`).val(from);
+            $(`[name=to]`).val(to);
+            $(`[name=city]`).val(city);
+            if (intercity == 'on') {
+                $("#to").show();
+                $("#from").show();
+                $("#city").hide();
+                $("#website-cost-google-analytics-yes").prop("checked", true);
+            } else {
+                $("#to").hide();
+                $("#from").hide();
+                $("#city").show();
+                $("#website-cost-google-analytics-no").prop("checked", true);
+            }
+        });
+    </script>
+    {% endif %}
+
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags == "success" %}
+    <script>
+        $("#contact-message").html('{{message}}');
+        const toastLiveExample = document.getElementById("contact-toast");
+        const toast = new bootstrap.Toast(toastLiveExample);
+        toast.show();
+    </script>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    </div>
+</body>
+
+</html>

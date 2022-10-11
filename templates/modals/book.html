@@ -1,0 +1,59 @@
+<div>
+    <div data-target="#myModal1"></div>
+    <div class="modal1 mfp-hide" id="myModal1">
+        <div class="block mx-auto" style="background-color: #fff; max-width: 800px">
+            <div class="row m-0">
+                <div id="city-image" class="col-md-6">
+                </div>
+                <div class="col-md-6 p-4">
+                    <div>
+                        <h4 class="text-uppercase ls1 mb-2" id="title"></h4>
+                        <form action="{% url 'pages:booking' %}" method="POST" class="row mb-0" id="booking-form">
+
+                            <div class="container-fluid">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-12 col-md-6 form-group">
+                                        <label for="">Pickup Date:</label>
+                                        <input name="date" type="text" value=""
+                                            class="form-control text-start component-datepicker today"
+                                            placeholder="MM/DD/YYYY" required />
+                                    </div>
+                                    <div class="col-12 col-md-6 form-group ps-2">
+                                        <label for="">Pickup Time:</label>
+                                        <input name=time type="text"
+                                            class="form-control datetimepicker-input datetimepicker1 text-start"
+                                            data-toggle="datetimepicker" data-target=".datetimepicker1"
+                                            placeholder="00:00 AM/PM" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <input id="booking_type" type="hidden" name="booking_type">
+                            <input id="booking_price_id" type="hidden" name="booking_price_id">
+                            <div class="col-12 form-group">
+                                <label for="">Name:</label>
+                                <input name="name" type="text" class="form-control  text-start" placeholder="Enter Name"
+                                    required />
+                            </div>
+                            <div class="col-12 form-group">
+                                <label for="">Pickup Address:</label>
+                                <input name="address" type="text" class="form-control  text-start"
+                                    placeholder="Enter Pickup Address" required />
+                            </div>
+                            <div class="col-12 form-group">
+                                <label for="">Phone Number</label>
+                                <input name="phone" type="tel" class="form-control  text-start"
+                                    placeholder="Enter Phone" required />
+                            </div>
+                            <div class="col-12 form-group">
+                                <button type="submit" class="button button-rounded button-large button-dark m-0 col-12"
+                                    value="submit">
+                                    Book Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
